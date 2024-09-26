@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastrar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <div id="fundo">
+        <div id="formulario">
+            <form action="php/insert.php" method="get">
+                <h1>Cadastre-se</h1>
+                <p id="subtitulo">Crie sua conta</p>
+                <input class="inputs" name="nome_cadastro" type="text" placeholder="Nome">
+                <input class="inputs" name="email_cadastro" type="email" placeholder="@gmail.com">
+                <input class="inputs" name="senha_cadastro" type="password" placeholder="Senha">
+                <hr>
+                <div id="inscrever_link">
+                    <p id="text_inscrever">Já tem uma conta?</p>
+                    <a href="login.html">Logar</a>
+                </div>
+                <div id="div_button">
+                    <input class="buttons" type="submit" id="enviar_button" value="Cadastre-se">
+                </div>
+            </form>
+            <p id="options">Ou entre com suas redes-sociais</p>
+            <div id="redes">
+                <button class="button_redes buttons"><img class="icons" src="img/google.png" alt="">Google</button>
+                <button class="button_redes buttons"><img class="icons" src="img/facebook.png" alt="">Facebook</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>CADASTRE-SE JÁ <br>E <span id="ultima_palavra">APROVEITE!</span></h1>
+    </footer>
+</body>
+</html>
