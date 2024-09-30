@@ -21,11 +21,7 @@ input::placeholder {
 }
 
 footer {
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
+    padding-left: 1.25rem;
 }
 
 a {
@@ -41,7 +37,7 @@ h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 4rem;
 }
 
 p {
@@ -97,20 +93,22 @@ p {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #fundo {
     display: flex;
+    align-items: flex-end;
     align-items: center;
     justify-content: center;
-    height: 550px;
-    padding: 1.25rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    height: 45rem;
 }
 
 #formulario {
     width: 100%;
     max-width: 500px;
-    padding: 1.25rem;
 }
 
 #entrar_button {
@@ -169,6 +167,10 @@ p {
     #formulario {
         width: 90%;
         padding: 1rem;
+    }
+
+    #fundo{
+        height: auto;
     }
 
     #input_email, #input_senha {
