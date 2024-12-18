@@ -5,7 +5,8 @@
 }
 
 body {
-    background-image: url(/img/fundo.png);
+    background-color: #160430;
+    ;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -32,7 +33,7 @@ a {
     font-size: 0.875rem;
 }
 
-h1 {
+#titulo {
     color: #FFFFFF;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -53,7 +54,8 @@ p {
     margin-right: 5px;
 }
 
-#input_email, #input_senha {
+#input_email,
+#input_senha {
     width: 100%;
     max-width: 500px;
     height: 55px;
@@ -102,8 +104,7 @@ p {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 2rem;
-    height: 45rem;
+    height: 37rem;
 }
 
 #formulario {
@@ -134,9 +135,25 @@ p {
     transform: scale(1.05);
 }
 
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 #redes {
     display: flex;
     justify-content: space-between;
+}
+
+#texto_baixo {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2rem;
 }
 
 #inscrever_link {
@@ -169,15 +186,17 @@ p {
         padding: 1rem;
     }
 
-    #fundo{
+    #fundo {
         height: auto;
     }
 
-    #input_email, #input_senha {
+    #input_email,
+    #input_senha {
         height: 45px;
     }
 
-    .button_redes, #entrar_button {
+    .button_redes,
+    #entrar_button {
         width: 100%;
         font-size: medium;
     }
@@ -192,7 +211,7 @@ p {
         font-size: 0.8rem;
     }
 
-    #subtitulo{
+    #subtitulo {
         font-weight: 200;
     }
 
@@ -201,7 +220,8 @@ p {
         align-items: center;
     }
 
-    .button_redes, #entrar_button{
+    .button_redes,
+    #entrar_button {
         width: 120px;
         font-size: medium;
     }

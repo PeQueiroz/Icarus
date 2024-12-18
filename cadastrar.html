@@ -1,42 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastrar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Cadastre-se</title>
 </head>
+
 <body>
     <div id="fundo">
-        <div id="formulario">
-            <form action="php/insert.php" method="get">
-                <h1>Cadastre-se</h1>
-                <p id="subtitulo">Crie sua conta</p>
-                <input class="inputs" name="nome_cadastro" type="text" placeholder="Nome">
-                <input class="inputs" name="email_cadastro" type="email" placeholder="@gmail.com">
-                <input class="inputs" name="senha_cadastro" type="password" placeholder="Senha">
-                <hr>
-                <div id="inscrever_link">
-                    <p id="text_inscrever">Já tem uma conta?</p>
-                    <a href="login.html">Logar</a>
+        <div id="lateral">
+            <div id="container">
+                <img src="img/Icarus.png" alt="Logo" id="logo">
+                <footer>
+                    <h1 id="texto_baixo">CADASTRE-SE JÁ <br>E <span id="ultima_palavra">APROVEITE!</span></h1>
+                </footer>
+            </div>
+        </div>
+        <div class="container">
+            <div id="formulario">
+                <form id="cadastroForm" action="php/insert.php" method="get">
+                    <h1 id="titulo">Cadastre-se</h1>
+                    <label for="nome_cadastro">Nome:</label>
+                    <input id="nome_cadastro" class="inputs" name="nome_cadastro" type="text" placeholder="Nome"
+                        >
+
+                    <label for="email_cadastro">E-mail:</label>
+                    <input id="email_cadastro" class="inputs" name="email_cadastro" type="email"
+                        placeholder="@gmail.com" >
+
+                    <label for="senha_cadastro">Crie uma senha:</label>
+                    <input id="senha_cadastro" class="inputs" name="senha_cadastro" type="password" placeholder="Senha"
+                        required>
+
+                    <label for="confirmar_senha">Confirme a senha:</label>
+                    <input id="confirmar_senha" class="inputs" name="confirmar_senha" type="password"
+                        placeholder="Confirmar senha" required>
+                    <div id="msg-box">
+                        <p id="msg" hidden>As senhas não correspondem!</p>
+                    </div>
+
+                    <hr>
+                    <div id="inscrever_link">
+                        <p id="text_inscrever">Já tem uma conta?</p>
+                        <a href="login.html">Logar</a>
+                    </div>
+                    <div id="div_button">
+                        <input class="buttons" type="submit" id="enviar_button" value="Cadastre-se">
+                    </div>
+                </form>
+                <p id="options">Ou entre com suas redes-sociais</p>
+                <div id="redes">
+                    <button class="button_redes buttons"><img class="icons" src="img/google.png" alt="">Google</button>
+                    <button class="button_redes buttons"><img class="icons" src="img/facebook.png"
+                            alt="">Facebook</button>
                 </div>
-                <div id="div_button">
-                    <input class="buttons" type="submit" id="enviar_button" value="Cadastre-se">
-                </div>
-            </form>
-            <p id="options">Ou entre com suas redes-sociais</p>
-            <div id="redes">
-                <button class="button_redes buttons"><img class="icons" src="img/google.png" alt="">Google</button>
-                <button class="button_redes buttons"><img class="icons" src="img/facebook.png" alt="">Facebook</button>
             </div>
         </div>
     </div>
-    <footer>
-        <h1>CADASTRE-SE JÁ <br>E <span id="ultima_palavra">APROVEITE!</span></h1>
-    </footer>
+
+    <script>
+        const form = document.getElementById('cadastroForm');
+        const senhaInput = document.getElementById('senha_cadastro');
+        const confirmarSenhaInput = document.getElementById('confirmar_senha');
+        const mensagemErro = document.getElementById('msg');
+
+        form.addEventListener('submit', function (event) {
+            if (senhaInput.value !== confirmarSenhaInput.value) {
+                event.preventDefault();
+                mensagemErro.removeAttribute('hidden');
+            } else {
+                mensagemErro.removeAttribute('hidden');
+            }
+        });
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/view/img/fundo.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+hr {
+    margin-top: 1rem;
+}
+
+input::placeholder {
+    color: #B6B6B6;
+    font-size: 1rem;
+}
+
+footer {
+    padding-left: 1.25rem;
+}
+
+a {
+    color: #0A66C2;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.875rem;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
+}
+
+p {
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.25rem;
+}
+
+.icons {
+    width: 20px;
+    margin-right: 5px;
+}
+
+#input_email, #input_senha {
+    width: 100%;
+    max-width: 500px;
+    height: 55px;
+    border: none;
+    padding: 0 1rem;
+    margin-top: 0.625rem;
+    background-color: #3B2063;
+    box-shadow: 0 0 11.28px 0 #00000029 inset;
+    border-radius: 10px;
+    color: #A4A4A4;
+    outline: none;
+}
+
+.button_redes {
+    width: 100%;
+    max-width: 230px;
+    height: 40px;
+    border: none;
+    border-radius: 11.1px;
+    background-color: #3B2063;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#text_inscrever {
+    font-size: 0.875rem;
+    margin-right: 5px;
+}
+
+#div_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#fundo {
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    height: 45rem;
+}
+
+#formulario {
+    width: 100%;
+    max-width: 500px;
+}
+
+#entrar_button {
+    width: 100%;
+    max-width: 250px;
+    height: 40px;
+    border-radius: 18.8px;
+    border: none;
+    margin: 10px 0;
+    background: linear-gradient(90.04deg, rgba(62, 112, 161, 0.48) 0.03%, rgba(62, 112, 161, 0.4) 101.88%);
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.buttons {
+    transition-duration: 0.5s;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#redes {
+    display: flex;
+    justify-content: space-between;
+}
+
+#inscrever_link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 0.625rem;
+}
+
+#subtitulo {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+}
+
+#ultima_palavra {
+    color: #0A66C2;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    #formulario {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    #fundo{
+        height: auto;
+    }
+
+    #input_email, #input_senha {
+        height: 45px;
+    }
+
+    .button_redes, #entrar_button {
+        width: 100%;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    #subtitulo{
+        font-weight: 200;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button_redes, #entrar_button{
+        width: 120px;
+        font-size: medium;
+    }
+}
