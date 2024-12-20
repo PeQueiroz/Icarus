@@ -19,11 +19,13 @@ CREATE TABLE Perfil
 
 CREATE TABLE Funcionario 
 ( 
- ID_Funcionario INT PRIMARY KEY AUTO_INCREMENT,  
- Nome INT NOT NULL,  
- Especialidade VARCHAR(30) NOT NULL,  
- ID_Usuario INT NOT NULL
-);
+ ID_Funcionario INT PRIMARY KEY,  
+ Nome VARCHAR(n) NOT NULL,  
+ Especialidade VARCHAR(n) NOT NULL,  
+ Descricao VARCHAR(n) NOT NULL,  
+ Contato VARCHAR(n),  
+ Status VARCHAR(n) NOT NULL 
+); 
 
 CREATE TABLE Conversa 
 ( 
