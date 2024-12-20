@@ -1,15 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Funcionário</title>
 </head>
+
 <body>
     <form method="get" action="php/insert_funcionario.php">
-        <input type="text" name="nome">
-        <input type="text" name="especialidade" id="">
-        <input type="submit">
+        <h1>Cadastro de Funcionário</h1>
+        <input type="text" name="nome" placeholder="Digite seu nome" required>
+        <input type="text" name="especialidade" placeholder="Digite sua especialidade" required>
+        <input type="submit" value="Cadastrar">
+        <button type="button" onclick="window.history.back();">Voltar</button>
     </form>
 </body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    form h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #160430;
+    }
+
+    input[type="text"],
+    input[type="submit"],
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        background-color: #160430;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #2b054f;
+    }
+
+    button {
+        background-color: #ffffff;
+        color: #160430;
+        border: 2px solid #160430;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #160430;
+        color: white;
+    }
+</style>
 </html>
