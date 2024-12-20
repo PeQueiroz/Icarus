@@ -54,7 +54,6 @@
         while ($row = $result->fetch_assoc()) {
           $status = strtolower(htmlspecialchars($row["Status"]));
 
-          // Adicionar o atributo href apenas se o status for online
           $link = ($status === "online") ? 'href="detalhes.php?id=' . urlencode($row["ID_Funcionario"]) . '"' : '';
 
           echo '<a class="info-box ' . ($status === "online" ? 'clickable' : 'disabled') . '" ' . $link . '>';

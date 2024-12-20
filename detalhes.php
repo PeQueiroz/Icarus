@@ -12,11 +12,9 @@
     <?php
     include 'php/connection.php';
 
-    // Verifica se o ID foi passado via GET
     if (isset($_GET['id'])) {
-        $id = intval($_GET['id']); // Converte o ID para um inteiro seguro
+        $id = intval($_GET['id']);
 
-        // Consulta para obter detalhes da pessoa
         $query = "SELECT `Nome`, `Especialidade`, `Status`, `Descricao`, `Contato` FROM `funcionario` WHERE `ID_Funcionario` = ?";
         $stmt = $connection->prepare($query);
         $stmt->bind_param('i', $id);
@@ -36,7 +34,6 @@
             echo '<p>' . htmlspecialchars($row["Descricao"]) . '</p>';
             echo '<p><strong>Status:</strong> <span class="' . strtolower(htmlspecialchars($row["Status"])) . '">' . htmlspecialchars($row["Status"]) . '</span></p>';
             
-            // Botão de contato com link dinâmico
             if (!empty($row["Contato"])) {
                 echo '<a href="' . htmlspecialchars($row["Contato"]) . '" class="action-button" target="_blank">Entrar em Contato</a>';
             } else {
